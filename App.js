@@ -1,10 +1,16 @@
 import React from 'react';
-import {StyleSheet, View,Text} from 'react-native';
+import {StyleSheet, View} from 'react-native';
+import MapView from 'react-native-maps'
 
 const App = () => {
     return (
         <View style={styles.container}>
-            <Text>test</Text>
+            <MapView
+                style={StyleSheet.absoluteFillObject}
+                provider={MapView.PROVIDER_GOOGLE}
+                initialRegion={{latitude:62.03389,longitude:129.73306}}
+            />
+
         </View>
     );
 }
